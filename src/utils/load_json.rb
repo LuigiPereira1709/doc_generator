@@ -1,5 +1,11 @@
 require 'json'
-require '../services/translator.rb'
 
 module Json
-  def self.build.path(service, method)
+  def self.read(service, method)
+    JSON.parse(File.read(build_path(service, method)))
+  end
+
+  private_class_method def self.build_path(service, method)
+    File.join(File.dirname(__FILE__), '__', 'services', service, "#{method}_prompt.json")
+  end
+end
