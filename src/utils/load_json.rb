@@ -9,7 +9,3 @@ module Json
     File.join('src', 'data', 'services', service, "#{method}_prompt.json")
   end
 end
-
-json = Json.read('test_service', 'test_method')
-
-p json
