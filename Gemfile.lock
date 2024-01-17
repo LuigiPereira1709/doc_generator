@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    diff-lcs (1.5.0)
     dotenv (2.8.1)
     event_stream_parser (1.0.0)
     faraday (2.9.0)
@@ -9,9 +10,23 @@ GEM
       multipart-post (~> 2)
     faraday-net_http (3.1.0)
       net-http
+    json (2.7.1)
     multipart-post (2.3.0)
     net-http (0.4.1)
       uri
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.1)
     ruby-openai (6.3.1)
       event_stream_parser (>= 0.3.0, < 2.0.0)
       faraday (>= 1)
@@ -23,6 +38,8 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  json
+  rspec
   ruby-openai
 
 BUNDLED WITH
