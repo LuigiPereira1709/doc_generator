@@ -3,6 +3,6 @@
         "text": "",
         "origin_country": "",
         "destination_language": "",
-        "culture_explanation": ""
+        "culture_explanation": "explanation of translation in the origin culture and language. max 5 lines"
     }
 }
