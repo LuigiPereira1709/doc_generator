@@ -6,6 +6,10 @@ module Json
   end
 
   private_class_method def self.build_path(service, method)
-    File.join(File.dirname(__FILE__), '__', 'services', service, "#{method}_prompt.json")
+    File.join('src', 'data', 'services', service, "#{method}_prompt.json")
   end
 end
+
+json = Json.read('test_service', 'test_method')
+
+p json
