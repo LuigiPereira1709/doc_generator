@@ -1,15 +1,16 @@
 require 'openai'
-require_relative '../config/config'
+require 'dotenv'
 
 module ClientOpenAI
-  def init_client
+  def self.init_client
     configure_openai
     OpenAI::Client.new
   end
 
   private
 
-  def configure_openai
-    OpenAI.configure { |config| config.api_key = Key.load }
+  def self.configure_openai
+    Dotenv.load('./.env')
+    OpenAI.configure { |config| config.access_token = ENV.fetch("API_KEY_ACCESS")}
   end
 end
