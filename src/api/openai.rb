@@ -1,5 +1,5 @@
 require 'openai'
-require_relative '../config'
+require_relative '../config/config'
 
 module ClientOpenAI
   def init_client
